@@ -1,5 +1,4 @@
-# Tools
+# kali-backup
 Compilation of stuff I want backed up for oscp
 
-Just incase we nuke our system :)
-# kali-backup
+Just incase we nuke our system :)  
