@@ -1,7 +1,6 @@
 #### SMB commands
 smbmap -H 10.11.1.136 -u null -p ""   
-smbmap -H 10.11.1.136 -u null -p "" -R   
-smbclient \\\\10.11.1.136\\'Bob Share' ""    
+smbmap -H 10.11.1.136 -u null -p "" -R    
 smbclient \\\\\\\10.11.1.136\\\\'Bob Share' ""    
 
 #### SMB file transfer
